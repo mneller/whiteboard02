@@ -1,0 +1,9 @@
+#testWhiteBoard {
+  position: absolute;
+  left:10px;
+  top:200px;
+  width: 1000px;
+  height: 500px;
+  background-color: ivory;
+  border: 2px dashed black ;
+}
