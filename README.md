@@ -1,4 +1,6 @@
-# Whiteboard01
+# Whiteboard02
+
+This has been started as a mirror of whiteboard01 (https://help.github.com/articles/duplicating-a-repository/)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.18.
 
