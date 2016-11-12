@@ -2,30 +2,33 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.18.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This is a first simple exercise on a series of whiteboard examples for __Angular 2__. 
 
-## Code scaffolding
+The story is to create two sticky notes and make them movable around on the whiteboard/website.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+## Components
 
-## Build
+This example use 2 Component. One component is the __Whiteboard__ component and the other is the __Sticker__ component. 
+There is little special on this components as the sticker are made movable by the directive __Draggable__.
+Both components are created by 'ng g component Whiteboard' and 'ng g component Sticker'
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+# Directives
+The example is using the Directive __Draggable__ for moving the component. It assigns 'HostListeners' for the events 'mouse-down', 'mouse-up', 'mouse-move'. 
 
-## Running unit tests
+The 'mouse-down' notes the coordinates to ensure that the elmement is following the 'mouse-moves' until there is 'mouse-up'
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Here is the central function for the movement:
 
-## Running end-to-end tests
+```TypeScript
+@HostListener('mousemove', ['$event']) onMousemove(event) {
+    if (this.dragMode) {
+      // calculate the move in PX since mouse down
+      const deltaLeft = event.clientX - this.mouseDownLeft;
+      const deltaTop = event.clientY - this.mouseDownTop;
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+      const newLeft = (this.draggableLeft + deltaLeft) + 'px';
+      const newTop = (this.draggableTop + deltaTop) + 'px';
+      this.element.nativeElement.style.left  = newLeft;
+      this.element.nativeElement.style.top = newTop;
+    }
+``` 

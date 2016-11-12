@@ -2,12 +2,18 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {DraggableDirective} from "./draggable.directive";
+import {StickerComponent} from "./sticker/sticker.component";
+import {WhiteboardComponent} from "./whiteboard/whiteboard.component";
 
 describe('App: Whiteboard01', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        WhiteboardComponent,
+        StickerComponent,
+        DraggableDirective
       ],
     });
   });

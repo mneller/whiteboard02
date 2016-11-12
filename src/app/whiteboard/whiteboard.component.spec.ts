@@ -1,9 +1,10 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+//import { By } from '@angular/platform-browser';
+//import { DebugElement } from '@angular/core';
 
 import { WhiteboardComponent } from './whiteboard.component';
+import {StickerComponent} from "../sticker/sticker.component";
 
 describe('WhiteboardComponent', () => {
   let component: WhiteboardComponent;
@@ -11,7 +12,10 @@ describe('WhiteboardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WhiteboardComponent ]
+      declarations: [
+        WhiteboardComponent,
+        StickerComponent
+      ]
     })
     .compileComponents();
   }));
