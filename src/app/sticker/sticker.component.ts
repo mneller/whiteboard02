@@ -6,9 +6,7 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./sticker.component.css'],
 })
 export class StickerComponent {
+  @Input() stickerText: string;
   @Input() topValue: number;
   @Input() leftValue: number;
-  constructor() { }
-
-
 }

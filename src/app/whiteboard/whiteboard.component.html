@@ -1,5 +1,14 @@
 <h1> {{ wbTitle }}</h1>
 <div id="testWhiteBoard">
-  <ellzap-sticker>Here comes the note 1</ellzap-sticker>
-  <ellzap-sticker [topValue]=100 [leftValue]=100>Here comes the note 2</ellzap-sticker>
+  <!--div *ngFor="let sticker of stickers">
+    <ellzap-sticker [topValue]="sticker.topValue" [leftValue]="sticker.leftValue" [stickerText]="sticker.stickerText">Here comes the note</ellzap-sticker>
+  </div-->
+    <div *ngFor="let sticker of stickers">
+      <ellzap-sticker
+        [topValue]="sticker.topValue"
+        [leftValue]="sticker.leftValue"
+        [stickerText]="sticker.stickerText">
+        Here comes the note
+      </ellzap-sticker>
+    </div>
 </div>
