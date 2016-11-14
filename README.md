@@ -1,10 +1,19 @@
-# Whiteboard01
+# Whiteboard02
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.18.
+This has been started as a mirror of whiteboard01 (https://help.github.com/articles/duplicating-a-repository/)
 
-This is a first simple exercise on a series of whiteboard examples for __Angular 2__. 
+This is a 2nd simple exercise on a series of whiteboard examples for __Angular 2__. 
 
-The story is to create two sticky notes and make them movable around on the whiteboard/website.
+As Whiteboard01 is version is developming the whiteboard further. 
+ 
+# Installation:
+This repo is tested by usage for Webstorm. So to start this you should create this by creating a new project by cloning this repo. The second step is to right click on the 'package.json' and run an 'npm install'. 
+After this you could be run the application by 'npm start' or performing the test by 'npm test' and 'npm e2e'. 
+
+# User Stories:
+1. The developer should be able to create sticker notes with different texts.
+2. The user should be able to add new sticker notes
+3. The user should be able to delete an existing sticker note
 
 ## Components
 
