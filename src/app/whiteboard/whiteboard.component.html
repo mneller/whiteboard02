@@ -1,8 +1,6 @@
 <h1> {{ wbTitle }}</h1>
+<form> <button (click)="newSticker()">Add Note</button>
 <div id="testWhiteBoard">
-  <!--div *ngFor="let sticker of stickers">
-    <ellzap-sticker [topValue]="sticker.topValue" [leftValue]="sticker.leftValue" [stickerText]="sticker.stickerText">Here comes the note</ellzap-sticker>
-  </div-->
     <div *ngFor="let sticker of stickers">
       <ellzap-sticker
         [topValue]="sticker.topValue"
@@ -12,3 +10,4 @@
       </ellzap-sticker>
     </div>
 </div>
+</form>
