@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'ellzap-sticker',
@@ -6,7 +6,9 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./sticker.component.css'],
 })
 export class StickerComponent {
+  @Input() stickerID: number;
   @Input() stickerText: string;
   @Input() topValue: number;
   @Input() leftValue: number;
+  @Output() selected = new EventEmitter();
 }

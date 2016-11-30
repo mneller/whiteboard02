@@ -12,16 +12,18 @@ import {StickerService} from "../sticker.service";
 
 export class WhiteboardComponent implements OnInit{
   stickers: Sticker[];
+  selectedSticker: Sticker;
+
   wbTitle: String = 'Whiteboard Lesson 02';
 
   constructor(private stickerService: StickerService) {}
 
   newSticker() {
     this.stickerService.createNewSticker();
-    this.stickers = this.stickerService.getSticker();
+    this.stickers = this.stickerService.getStickers();
   }
 
   ngOnInit() {
-    this.stickers = this.stickerService.getSticker();
+    this.stickers = this.stickerService.getStickers();
   }
 }
