@@ -16,6 +16,10 @@ export class StickerService {
     this.stickers.push(sticker);
   }
 
+  deleteStickerWithStickerID(id:number) {
+    this.deleteSticker(this.getSticker(id));
+  }
+
   deleteSticker(s:Sticker){
     var index = this.stickers.indexOf(s, 0);
     if (index > -1) {

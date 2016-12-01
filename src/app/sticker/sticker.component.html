@@ -2,7 +2,7 @@
           ellzap-draggable
           [style.top]="topValue+'px'"
           [style.left]="leftValue+'px'"
-          (mousedown)="selected.emit({id: stickerID})"
+          (click)="onSelected()"
 >
   <div class="stickertop">Note {{stickerID}}</div>
   <textarea class="sticker">

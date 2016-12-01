@@ -11,4 +11,11 @@ export class StickerComponent {
   @Input() topValue: number;
   @Input() leftValue: number;
   @Output() selected = new EventEmitter();
+
+
+  onSelected(){
+    this.selected.emit({stickerID: this.stickerID});
+    console.log("Selected stickerID" + this.stickerID);
+  }
+
 }
