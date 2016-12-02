@@ -1,6 +1,12 @@
-<textarea class="sticker"
+<div
           ellzap-draggable
           [style.top]="topValue+'px'"
-          [style.left]="leftValue+'px'">
+          [style.left]="leftValue+'px'"
+          (click)="onSelected()"
+>
+  <div class="stickertop">Note {{stickerID}}</div>
+  <textarea class="sticker">
   {{stickerText}}
 </textarea>
+</div>
+

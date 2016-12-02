@@ -1,14 +1,16 @@
 <h1> {{ wbTitle }}</h1>
-<div id="testWhiteBoard">
-  <!--div *ngFor="let sticker of stickers">
-    <ellzap-sticker [topValue]="sticker.topValue" [leftValue]="sticker.leftValue" [stickerText]="sticker.stickerText">Here comes the note</ellzap-sticker>
-  </div-->
+<form><button (click)="newSticker()">Add Note</button>  <button (click)="deleteSelectedSticker()">Delete Note</button>
+
+  <div id="testWhiteBoard">
     <div *ngFor="let sticker of stickers">
       <ellzap-sticker
+        [stickerID]="sticker.stickerID"
         [topValue]="sticker.topValue"
         [leftValue]="sticker.leftValue"
-        [stickerText]="sticker.stickerText">
+        [stickerText]="sticker.stickerText"
+         (selected)="onStickerSelected($event)">
         Here comes the note
       </ellzap-sticker>
     </div>
 </div>
+</form>
